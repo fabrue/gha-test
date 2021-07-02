@@ -34,12 +34,8 @@ jobs:
           role-duration-seconds: 1800
           role-session-name: fiesta-infrastructure-${{ github.run_id }}
         
-      #- name: Amazon ECR "Login" Action for GitHub Actions
+      - name: Amazon ECR "Login" Action for GitHub Actions
         # You may pin to the exact commit or the version.
         # uses: aws-actions/amazon-ecr-login@aaf69d68aa3fb14c1d5a6be9ac61fe15b48453a2
-       # uses: aws-actions/amazon-ecr-login@v1
-        #with:
-          # A comma-delimited list of AWS account IDs that are associated with the ECR registries. If you do not specify a registry, the default ECR registry is assumed.
-         # registries: # optional
-          # Whether to skip explicit logout of the registries during post-job cleanup. Exists for backward compatibility on self-hosted runners. Not recommended.
-          #skip-logout: # optional
+        uses: aws-actions/amazon-ecr-login@v1
+
