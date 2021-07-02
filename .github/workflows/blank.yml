@@ -30,7 +30,7 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: eu-central-1
-          role-to-assume: ${{ env.AWS_ROLE_TO_ASSUME }}
+          role-to-assume: access-wordpress-ecr-repo # ${{ env.AWS_ROLE_TO_ASSUME }}
           role-duration-seconds: 1800
           role-session-name: gha-${{ github.run_id }}
         
