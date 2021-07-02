@@ -1,7 +1,7 @@
 name: Fetch wordpress docker images
 
 on:
-  workflow-dispatch:
+  workflow_dispatch:
     inputs:
       name:
         description: 'Person to greet'
@@ -9,10 +9,7 @@ on:
         default: 'Mona the Octocat'
   schedule:
     # Run this job once a day at 6 am
-    - cron: '00 6 * * *'
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+    - cron: '0 6 * * *'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
