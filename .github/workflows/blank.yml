@@ -32,7 +32,7 @@ jobs:
           aws-region: eu-central-1
           role-to-assume: ${{ env.AWS_ROLE_TO_ASSUME }}
           role-duration-seconds: 1800
-          role-session-name: fiesta-infrastructure-${{ github.run_id }}
+          role-session-name: gha-${{ github.run_id }}
         
       - name: Amazon ECR "Login" Action for GitHub Actions
         # You may pin to the exact commit or the version.
