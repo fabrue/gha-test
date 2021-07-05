@@ -37,26 +37,15 @@ jobs:
       - name: Amazon ECR "Login" Action for GitHub Actions
         uses: aws-actions/amazon-ecr-login@v1
       
+      - uses: satackey/action-docker-layer-caching@v0.0.11
+      # Ignore the failure of a step and avoid terminating the job.
+        continue-on-error: true
+      
+      - name: pull docker
+        run: docker pull wordpress:latest
+      
       # - name: Test docker repo
         #run: docker pull 136747308658.dkr.ecr.eu-central-1.amazonaws.com/wordpress:latest
         #run: docker pull --all-tags wordpress
-        
-      - name: DockerHub mirror
-        # You may pin to the exact commit or the version.
-        # uses: crazy-max/ghaction-dockerhub-mirror@617a3f31f6698d92c898f0d966a3035a8ff08956
-        uses: crazy-max/ghaction-dockerhub-mirror@v1.0.0
-        with:
-          # DockerHub username
-          # dockerhub-username: 
-          # DockerHub password or persona laccess token
-          # dockerhub-password: 
-          # DockerHub repo to mirror
-          dockerhub-repo: library/wordpress
-          # Destination registry (eg. ghcr.io)
-          dest-registry: 
-          # Destination repo (eg. username/repo)
-          dest-repo: 136747308658.dkr.ecr.eu-central-1.amazonaws.com/wordpress-sync-test
-          # Dry run
-          dry-run: true # optional, default is false
       
 
