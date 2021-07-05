@@ -26,7 +26,7 @@ jobs:
       - name: Show free space
         run: |
          df -h
-         docker system prune -a
+         docker system prune -a -f
          df -h
         
       - name: Configure AWS credentials
