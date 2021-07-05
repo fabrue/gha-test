@@ -24,7 +24,10 @@ jobs:
 #      - name: Fetch docker image
 #        run: docker pull wordpress:latest
       - name: Show free space
-        run: df -h
+        run: |
+         df -h
+         docker system prune -a
+         df -h
         
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
