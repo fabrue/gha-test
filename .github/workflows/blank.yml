@@ -40,6 +40,12 @@ jobs:
       - name: Test docker repo
         run: docker pull 136747308658.dkr.ecr.eu-central-1.amazonaws.com/wordpress:latest
       
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v3
+        with:
+          images: wordpress:latest
+      
 #      - name: Build, tag, and push image to Amazon ECR
 #        env:
 #          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
