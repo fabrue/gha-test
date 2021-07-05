@@ -20,15 +20,9 @@ jobs:
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-#      - name: Fetch docker image
-#        run: docker pull wordpress:latest
-      - name: Show free space
-        run: |
-         df -h
-         sudo rm -rf /usr/local/lib/android
-         sudo rm -rf /usr/share/dotnet
-         df -h
+    steps: 
+      - name: Install Skopeo
+        run: apt-get install skopeo
         
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -39,20 +33,8 @@ jobs:
           role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
           role-duration-seconds: 1800
           role-session-name: gha-${{ github.run_id }}
+      
         
-      - name: Amazon ECR "Login" Action for GitHub Actions
-        uses: aws-actions/amazon-ecr-login@v1
-      
-      - uses: satackey/action-docker-layer-caching@v0.0.11
-      # Ignore the failure of a step and avoid terminating the job.
-        continue-on-error: true
 
-      
-      - name: pull docker
-        run: docker pull --all-tags wordpress
-      
-      # - name: Test docker repo
-        #run: docker pull 136747308658.dkr.ecr.eu-central-1.amazonaws.com/wordpress:latest
-        #run: docker pull --all-tags wordpress
       
 
