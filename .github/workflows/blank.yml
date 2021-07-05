@@ -33,6 +33,9 @@ jobs:
           role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
           role-duration-seconds: 1800
           role-session-name: gha-${{ github.run_id }}
+          
+      - name: Sync registries
+        run: skopeo sync --dest-creds AWS:$(aws ecr get-login-password --output text) --src docker --dest docker docker.io/library/wordpress 136747308658.dkr.ecr.eu-central-1.amazonaws.com/
       
         
 
