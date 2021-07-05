@@ -22,7 +22,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps: 
       - name: Install Skopeo
-        run: apt-get install skopeo
+        run: sudo apt-get install skopeo
         
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
