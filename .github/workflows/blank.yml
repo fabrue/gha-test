@@ -38,8 +38,9 @@ jobs:
         uses: aws-actions/amazon-ecr-login@v1
       
       - name: Test docker repo
-        run: docker pull 136747308658.dkr.ecr.eu-central-1.amazonaws.com/wordpress:latest
-      
+        #run: docker pull 136747308658.dkr.ecr.eu-central-1.amazonaws.com/wordpress:latest
+        run: docker pull wordpress:latest
+        
       - name: Docker meta
         id: meta
         uses: docker/metadata-action@v3
