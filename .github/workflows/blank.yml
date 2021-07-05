@@ -39,7 +39,7 @@ jobs:
       
       - name: Test docker repo
         #run: docker pull 136747308658.dkr.ecr.eu-central-1.amazonaws.com/wordpress:latest
-        run: docker pull wordpress:latest
+        run: docker pull --all-tags wordpress
         
       - name: DockerHub mirror
         # You may pin to the exact commit or the version.
