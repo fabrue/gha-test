@@ -41,8 +41,11 @@ jobs:
       # Ignore the failure of a step and avoid terminating the job.
         continue-on-error: true
       
-      - name: pull docker
-        run: docker pull --all-tags wordpress
+      # Disk usage
+      run: df -h
+      
+      #- name: pull docker
+      #  run: docker pull --all-tags wordpress
       
       # - name: Test docker repo
         #run: docker pull 136747308658.dkr.ecr.eu-central-1.amazonaws.com/wordpress:latest
