@@ -24,6 +24,9 @@ jobs:
       - name: Install Skopeo
         run: sudo apt-get install skopeo
         
+      - name: Checkout repo to access yaml file
+        uses: actions/checkout@v2  
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -35,7 +38,7 @@ jobs:
           role-session-name: gha-${{ github.run_id }}
           
       - name: Sync registries
-        run: skopeo sync --dest-creds AWS:$(aws ecr get-login-password --output text) --src yaml --dest docker /github/workspace/sync.yaml 136747308658.dkr.ecr.eu-central-1.amazonaws.com/
+        run: skopeo sync --dest-creds AWS:$(aws ecr get-login-password --output text) --src yaml --dest docker sync.yaml 136747308658.dkr.ecr.eu-central-1.amazonaws.com/
       
         
 
