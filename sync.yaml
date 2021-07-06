@@ -1,0 +1,8 @@
+docker.io:
+#    images:
+#        library/wordpress:
+#            - "1.0"
+#            - "2.0"
+#            - "sha256:0000000000000000000000000000000011111111111111111111111111111111"
+#    images-by-tag-regex:
+        library/wordpress: \bapache\b
