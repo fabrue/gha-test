@@ -35,7 +35,7 @@ jobs:
           role-session-name: gha-${{ github.run_id }}
           
       - name: Sync registries
-        run: skopeo sync --dest-creds AWS:$(aws ecr get-login-password --output text) --src yaml --dest docker ../../sync.yaml docker.io/library/wordpress 136747308658.dkr.ecr.eu-central-1.amazonaws.com/
+        run: skopeo sync --dest-creds AWS:$(aws ecr get-login-password --output text) --src yaml --dest docker ../../sync.yaml 136747308658.dkr.ecr.eu-central-1.amazonaws.com/
       
         
 
