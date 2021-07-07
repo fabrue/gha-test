@@ -1,14 +1,7 @@
 name: Fetch wordpress docker images
 
 on:
-  push:
-    branches: [ main ]
   workflow_dispatch:
-    inputs:
-      name:
-        description: 'Person to greet'
-        required: true
-        default: 'Mona the Octocat'
   schedule:
     # Run this job once a day at 6 am
     - cron: '0 6 * * *'
