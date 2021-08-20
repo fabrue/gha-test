@@ -7,6 +7,10 @@ on:
         description: 'plan or apply stages'
         default: 'plan'
         required: true
+      ENVIRONMENT:
+        description: 'prod, dev, qa'
+        default: 'dev'
+        required: true
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -18,3 +22,4 @@ jobs:
       - name: Print Mode
         run: |
           echo "The selected mode is: ${{ github.event.inputs.MODE }}"
+          echo "The selected environment is: ${{ github.event.inputs.ENVIRONMENT }}"
