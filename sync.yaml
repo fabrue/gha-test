@@ -1,6 +1,0 @@
-docker.io:
-   images:
-       library/wordpress:
-           - "latest"
-   images-by-tag-regex:
-       library/wordpress: ^[5678]\.[1-9]\.[1-9]-apache$
