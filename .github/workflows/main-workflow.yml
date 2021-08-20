@@ -1,0 +1,30 @@
+name: Main Workflow
+
+on:
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  job-in-cw:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    steps: 
+      - name: Print Mode
+        uses: convictional/trigger-workflow-and-wait@v1.5.0
+        with:
+          owner: fabrue
+          repo: gha-test
+          github_token: ${{ secrets.PAT_REPO_DI_ADMIN }}
+          workflow_file_name: children-workflow.yml
+          ref: master
+          wait_interval: 300
+          propagate_failure: true
+          trigger_workflow: true
+          wait_workflow: true
+          inputs: '
+            {
+              "ENVIRONMENT": "FOOBAR",
+              "MODE": "FOOBAR"
+            }
+          '
