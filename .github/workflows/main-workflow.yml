@@ -17,7 +17,7 @@ jobs:
           repo: gha-test
           github_token: ${{ secrets.PAT_REPO_DI_ADMIN }}
           workflow_file_name: children-workflow.yml
-          ref: master
+          ref: main
           wait_interval: 300
           propagate_failure: true
           trigger_workflow: true
