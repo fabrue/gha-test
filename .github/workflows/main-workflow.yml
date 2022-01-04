@@ -10,21 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps: 
-      - name: Print Mode
-        uses: convictional/trigger-workflow-and-wait@v1.5.0
-        with:
-          owner: fabrue
-          repo: gha-test
-          github_token: ${{ secrets.PAT_REPO_DI_ADMIN }}
-          workflow_file_name: children-workflow.yml
-          ref: main
-          wait_interval: 300
-          propagate_failure: true
-          trigger_workflow: true
-          wait_workflow: true
-          inputs: '
-            {
-              "ENVIRONMENT": "FOOBAR",
-              "MODE": "FOOBAR"
-            }
-          '
+      - name: Test helm
+        run: |
+          helm version
