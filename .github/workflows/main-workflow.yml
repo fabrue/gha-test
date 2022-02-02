@@ -16,18 +16,16 @@ jobs:
         run: |
           echo "::debug::Invoked workflow for branch: ${GITHUB_REF#refs/heads/}"
           if [[ ${GITHUB_REF#refs/heads/} == lab ]]; then
-            echo "1"
+            echo "Derived environment: lab"
             echo "##[set-output name=environment;]$(echo ${GITHUB_REF#refs/heads/})"
           elif [[ ${GITHUB_REF#refs/heads/} == main ]]; then
-            echo "2"
-            echo "##[set-output name=environment;]$(echo ${GITHUB_REF#refs/heads/})" 
+            echo "Derived environment: prod"
+            echo "##[set-output name=environment;]$(echo prod)" 
           else 
-            echo "3"
-            echo "##[set-output name=environment;]$(echo ${GITHUB_REF#refs/heads/})" 
             echo "Could not derive environment"
             exit 1
           fi
       
       - name: Print environment
         run: |
-          echo ${{ steps.derive_environment.outputs.branch }}
+          echo ${{ steps.derive_environment.outputs.environment }}
