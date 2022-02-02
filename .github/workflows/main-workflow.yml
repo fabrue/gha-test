@@ -3,7 +3,7 @@ name: Main Workflow
 on:
   workflow_dispatch:
   push:
-  
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   job-in-cw:
@@ -12,6 +12,7 @@ jobs:
 
     steps: 
       - name: Print Mode
+        id: derive_environment
         run: |
           echo "::debug::Invoked workflow for branch: ${GITHUB_REF#refs/heads/}"
           if [[ ${GITHUB_REF#refs/heads/} == lab ]]; then
@@ -23,3 +24,7 @@ jobs:
             echo "Could not derive environment"
             exit 1
           fi
+      
+      - name: Print environment
+        run: |
+          echo ${{ steps.derive_environment.outputs.branch }}
