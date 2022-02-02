@@ -2,7 +2,8 @@ name: Main Workflow
 
 on:
   workflow_dispatch:
-
+  push:
+  
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   job-in-cw:
@@ -10,7 +11,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps: 
-      - name: Test helm
+      - name: Print Mode
         run: |
-          helm version
-          kubectl version
+          echo "::debug::Invoked workflow for branch: ${GITHUB_REF#refs/heads/}"
+          if [[ ${GITHUB_REF#refs/heads/} == lab ]]; then
+            echo "##[set-output name=environment;]$(echo ${GITHUB_REF#refs/heads/})"
+          elif [[ ${GITHUB_REF#refs/heads/} == main ]]; then
+            echo "##[set-output name=environment;]$(echo ${GITHUB_REF#refs/heads/})" 
+          else 
+            echo ${GITHUB_REF#refs/heads/}
+            echo "Could not derive environment"
+            exit 1
+          fi
