@@ -11,21 +11,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps: 
-      - name: Print Mode
-        id: derive_environment
-        run: |
-          echo "::debug::Invoked workflow for branch: ${GITHUB_REF#refs/heads/}"
-          if [[ ${GITHUB_REF#refs/heads/} == lab ]]; then
-            echo "Derived environment: lab"
-            echo "##[set-output name=environment;]$(echo ${GITHUB_REF#refs/heads/})"
-          elif [[ ${GITHUB_REF#refs/heads/} == main ]]; then
-            echo "Derived environment: prod"
-            echo "##[set-output name=environment;]$(echo prod)" 
-          else 
-            echo "Could not derive environment"
-            exit 1
-          fi
-      
-      - name: Print environment
-        run: |
-          echo ${{ steps.derive_environment.outputs.environment }}
+    - name: Print an error
+      run: |
+        echo "::error ::I am an error. This workflow should fail"
