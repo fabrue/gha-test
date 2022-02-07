@@ -14,3 +14,4 @@ jobs:
     - name: Print an error
       run: |
         echo "::error ::I am an error. This workflow should fail"
+        exit 1
