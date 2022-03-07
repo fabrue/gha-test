@@ -1,0 +1,5 @@
+{
+    "name": "conventional-changelog-action",
+    "version": "6.16.1",
+    "description": "Helper file for conventional-changelog-action, which requires package.json"
+  }
