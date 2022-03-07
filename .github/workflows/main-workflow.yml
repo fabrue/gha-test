@@ -9,6 +9,9 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
+      - name: Print branch name
+        run: |
+          echo "Branch is" : ${{ env.GITHUB_REF }}
       - name: Conventional Changelog Action
         id: changelog
         uses: TriPSs/conventional-changelog-action@v3
