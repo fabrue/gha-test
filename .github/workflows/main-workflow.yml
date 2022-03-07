@@ -1,17 +1,25 @@
-name: Main Workflow
+name: Test release
 
 on:
-  workflow_dispatch:
   push:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  job-in-cw:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+  release:
+    steps:
+      - name: Conventional Changelog Action
+        id: changelog
+        uses: TriPSs/conventional-changelog-action@v3
+        with:
+          github-token: ${{ secrets.github_token }}
+          output-file: "false"
 
-    steps: 
-    - name: Print an error
-      run: |
-        echo "::error ::I am an error. This workflow should fail"
-        exit 1
+      - name: Create Release
+        uses: actions/create-release@v1
+        if: ${{ steps.changelog.outputs.skipped == 'false' }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.github_token }}
+        with:
+          tag_name: ${{ steps.changelog.outputs.tag }}
+          release_name: ${{ steps.changelog.outputs.tag }}
+          body: ${{ steps.changelog.outputs.clean_changelog }}
