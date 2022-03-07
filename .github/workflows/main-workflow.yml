@@ -12,8 +12,6 @@ jobs:
       - name: Print branch name
         run: |
           echo "1 Branch is" : ${{ github.ref_name }}
-          # echo "2 Branch is" : ${{ GITHUB_REF_NAME }}
-          # echo "3 Branch is" : ${{ github.GITHUB_REF_NAME }}
       - name: Conventional Changelog Action
         id: changelog
         uses: TriPSs/conventional-changelog-action@v3
