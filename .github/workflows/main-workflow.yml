@@ -13,7 +13,7 @@ jobs:
         run: |
           echo "1 Branch is" : ${{ env.GITHUB_REF }}
           echo "2 Branch is" : ${{ GITHUB_REF }}
-          echo "3 Branch is" : ${{ github.GITHUB_REF }}
+          # echo "3 Branch is" : ${{ github.GITHUB_REF }}
       - name: Conventional Changelog Action
         id: changelog
         uses: TriPSs/conventional-changelog-action@v3
