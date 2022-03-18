@@ -1,7 +1,13 @@
 name: Test release
 
 on:
-  push:
+  workflow_call:
+    inputs:
+      demo-value:
+        description: 'A username passed from the caller workflow'
+        default: 'john-doe'
+        required: false
+        type: string
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -12,12 +18,8 @@ jobs:
         with:
           path: this-repository
 
-      - name: Checkout datadrivers/github-actions-environment
-        uses: actions/checkout@v3
-        with:
-          repository: datadrivers/github-actions-environment
-          path: virtual-environments
-          ref: v0.0.2
+      - name: Print inputs
+        run: echo Input is ${{ inputs.demo-value }}
       
       - name: ls
         run:
