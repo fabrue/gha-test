@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          path: this-repository
+          fetch-depth: 0
 
       - name: Get changed files
         id: changed-files
