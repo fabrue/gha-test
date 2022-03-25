@@ -5,7 +5,9 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  call-workflow:
-    uses: ./.github/workflows/main-workflow.yml
-    with:
-      demo-value: fabian
+  test-opa:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Test opa
+        run: |
+          opa -version
