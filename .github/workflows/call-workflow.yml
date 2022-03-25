@@ -8,6 +8,10 @@ jobs:
   test-opa:
     runs-on: ubuntu-20.04
     steps:
+      - name: Setup OPA
+        uses: open-policy-agent/setup-opa@v1
+        with:
+          version: latest
       - name: Test opa
         run: |
           opa -version
