@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.1.0](https://github.com/fabrue/gha-test/compare/v2.0.0...v2.1.0) (2022-07-29)
+
+
+### Features
+
+* change lambda 1 ([bc6206b](https://github.com/fabrue/gha-test/commit/bc6206bec65da37b53acd2865aaba3826929de6d))
+* change lambda 2 ([b78036f](https://github.com/fabrue/gha-test/commit/b78036fc4652058bdc33499452d5ec8e4ffcac8c))
+
 ## [2.0.0](https://github.com/fabrue/gha-test/compare/v1.0.0...v2.0.0) (2022-07-29)
 
 
