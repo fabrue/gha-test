@@ -4,7 +4,11 @@
       "bump-minor-pre-major": true,
       "bump-patch-for-minor-pre-major": true
     },
-    "lambda1": { "release-as": "2.1.2" },
+    "lambda1": { 
+      "release-as": "2.1.2",
+      "package-name": "lambda1",
+      "changelog-path": "changelog.md"
+    },
     "lambda2": { "release-as": "" },
     "lambda3": { "release-as": "" }
     }
