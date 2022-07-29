@@ -12,3 +12,4 @@ jobs:
           release-type: simple
           command: manifest
           monorepo-tags: true
+          package-name: release-please-config.json
