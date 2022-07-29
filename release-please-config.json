@@ -8,6 +8,33 @@
       "bumpPatchForMinorPreMajor": false,
       "changelogPath": "CHANGELOG.md",
       "versioning": "default"
+    },
+    "lambda1": {
+      "releaseType": "simple",
+      "draft": false,
+      "prerelease": false,
+      "bumpMinorPreMajor": false,
+      "bumpPatchForMinorPreMajor": false,
+      "changelogPath": "CHANGELOG-lambda1.md",
+      "versioning": "default"
+    },
+    "lambda2": {
+      "releaseType": "simple",
+      "draft": false,
+      "prerelease": false,
+      "bumpMinorPreMajor": false,
+      "bumpPatchForMinorPreMajor": false,
+      "changelogPath": "CHANGELOG-lambda2.md",
+      "versioning": "default"
+    },
+    "lambda3": {
+      "releaseType": "simple",
+      "draft": false,
+      "prerelease": false,
+      "bumpMinorPreMajor": false,
+      "bumpPatchForMinorPreMajor": false,
+      "changelogPath": "CHANGELOG-lambda3.md",
+      "versioning": "default"
     }
   }
 }
