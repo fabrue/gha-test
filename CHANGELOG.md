@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/fabrue/gha-test/compare/v2.1.0...v2.2.0) (2022-07-29)
+
+
+### Features
+
+* test ci ([57ff75b](https://github.com/fabrue/gha-test/commit/57ff75be68b5ca225dcf9c56e0a13fd4e55e602e))
+
 ## [2.1.0](https://github.com/fabrue/gha-test/compare/v2.0.0...v2.1.0) (2022-07-29)
 
 
