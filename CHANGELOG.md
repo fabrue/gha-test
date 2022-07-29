@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.0.0](https://github.com/fabrue/gha-test/compare/v1.0.0...v2.0.0) (2022-07-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* deleted interface
+
+### Features
+
+* add another file ([9fa3142](https://github.com/fabrue/gha-test/commit/9fa31425c41d0c89f6b3de76352e14a919307b75))
+* deleted interface ([35383dc](https://github.com/fabrue/gha-test/commit/35383dcf464f5ea1830cfee7fead0e3d4e4be410))
+
+
+### Bug Fixes
+
+* use another emoji ([861ace9](https://github.com/fabrue/gha-test/commit/861ace9116574521d44e1b14550bb847d31ad80f))
+
 ## 1.0.0 (2022-07-29)
 
 
