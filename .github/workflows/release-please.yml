@@ -11,12 +11,12 @@ jobs:
       - name: create tag
         uses: rickstaa/action-create-tag@v1
         with:
-          tag: "foobar-4.2.0"
+          tag: "foobar-4.2.1"
           message: "Latest release"
 
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: foobar-4.2.0
+          tag_name: foobar-4.2.1
           files: |
             CHANGELOG.md
