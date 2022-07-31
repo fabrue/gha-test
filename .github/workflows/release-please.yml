@@ -14,13 +14,13 @@ jobs:
       - name: create tag
         uses: rickstaa/action-create-tag@v1
         with:
-          tag: "foobar-4.3.0"
+          tag: "foobar-4.3.1"
           # git log --oneline | grep ci 
 
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: foobar-4.3.0
-          body: ${{ env.CHANGELOG }} # ${{ github.run_id }}
+          tag_name: foobar-4.3.1
+          body: Newly added changes ${{ env.CHANGELOG }} # ${{ github.run_id }}
           files: |
             CHANGELOG.md
