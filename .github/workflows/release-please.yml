@@ -9,19 +9,18 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Generate Changelog
-        run: echo "CHANGELOG=$(git log --oneline | grep ci )" >> $GITHUB_ENV
+        run:  echo "CHANGELOG=$(echo CHANGELOG )" >> $GITHUB_ENV # echo "CHANGELOG=$(git log --oneline | grep ci )" >> $GITHUB_ENV
 
       - name: create tag
         uses: rickstaa/action-create-tag@v1
         with:
-          tag: "foobar-4.2.7"
-          message: ${{ env.CHANGELOG }}
+          tag: "foobar-4.2.8"
           # git log --oneline | grep ci 
 
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: foobar-4.2.7
-          body: ${{ github.run_id }} # ${{ env.CHANGELOG }}
+          tag_name: foobar-4.2.8
+          body: ${{ env.CHANGELOG }} # ${{ github.run_id }}
           files: |
             CHANGELOG.md
