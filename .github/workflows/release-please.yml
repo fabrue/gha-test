@@ -12,7 +12,8 @@ jobs:
         uses: rickstaa/action-create-tag@v1
         with:
           tag: "foobar-4.2.1"
-          message: "Latest release"
+          message: "$(pwd)"
+          # git log --oneline | grep ci 
 
       - name: Release
         uses: softprops/action-gh-release@v1
