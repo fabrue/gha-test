@@ -8,16 +8,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Generate Changelog
+        run: echo "CHANGELOG=$(git log --oneline | grep ci )" >> $GITHUB_ENV
+
       - name: create tag
         uses: rickstaa/action-create-tag@v1
         with:
-          tag: "foobar-4.2.3"
-          message: $(pwd)
+          tag: "foobar-4.2.4"
+          message: ${{ env.CHANGELOG }}
           # git log --oneline | grep ci 
 
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: foobar-4.2.3
+          tag_name: foobar-4.2.4
           files: |
             CHANGELOG.md
