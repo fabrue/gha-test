@@ -18,3 +18,5 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: foobar-4.2.0
+          files: |
+            CHANGELOG.md
