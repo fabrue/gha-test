@@ -11,10 +11,10 @@ jobs:
       - name: create tag
         uses: rickstaa/action-create-tag@v1
         with:
-          tag: "foobar-$(cat version.yml)"
+          tag: "foobar-4.2.0"
           message: "Latest release"
 
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: foobar-$(cat version.yml)
+          tag_name: foobar-4.2.0
