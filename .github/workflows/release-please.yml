@@ -7,5 +7,7 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
-      - name: Set RELEASE_VERSION from git tag as ENV
-        run: echo "RELEASE_VERSION=${{ github.ref_name }}" >> $GITHUB_ENV
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: foobar-$(cat version.yml)
