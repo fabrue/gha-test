@@ -7,9 +7,5 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
-      - uses: google-github-actions/release-please-action@v3
-        with:
-          release-type: simple
-          command: manifest
-          monorepo-tags: true
-          package-name: release-please-config.json
+      - name: Set RELEASE_VERSION from git tag as ENV
+        run: echo "RELEASE_VERSION=${{ github.ref_name }}" >> $GITHUB_ENV
