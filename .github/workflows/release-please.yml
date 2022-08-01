@@ -20,6 +20,8 @@ jobs:
           git tag ${{ env.LAMBDA_FUNCTION_NAME }}-$(cat version.yaml)
           git push origin ${{ env.LAMBDA_FUNCTION_NAME }}-$(cat version.yaml) 
           echo "release_tag=${{ env.LAMBDA_FUNCTION_NAME }}-$(cat version.yaml)" >> $GITHUB_ENV
+          zip -r ${{ env.LAMBDA_FUNCTION_NAME }}-"$(cat ../version.yml)".zip .
+          ls
       
       - name: debug
         run: whoami
