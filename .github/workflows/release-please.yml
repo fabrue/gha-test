@@ -13,13 +13,13 @@ jobs:
       - uses: actions/checkout@v3
       - name: Print Version
         run: |
-          cat version.yml
+          cat version.yaml
         
       - name: Create Release Tag
         run: |
-          git tag ${{ env.LAMBDA_FUNCTION_NAME }}-$(cat version.yml)
-          git push origin ${{ env.LAMBDA_FUNCTION_NAME }}-$(cat version.yml) 
-          echo "release_tag=$(${{ env.LAMBDA_FUNCTION_NAME }}-$(cat version.yml))" >> $GITHUB_ENV
+          git tag ${{ env.LAMBDA_FUNCTION_NAME }}-$(cat version.yaml)
+          git push origin ${{ env.LAMBDA_FUNCTION_NAME }}-$(cat version.yaml) 
+          echo "release_tag=$(${{ env.LAMBDA_FUNCTION_NAME }}-$(cat version.yaml))" >> $GITHUB_ENV
       
       - name: echo env
         run: env
