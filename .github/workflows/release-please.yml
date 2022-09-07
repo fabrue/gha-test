@@ -17,4 +17,4 @@ jobs:
           minimum-approvals: 1
           issue-title: "Confirm Tableau deployment"
       - name: debug
-        run: whoami
+        run: whoami && whoami
