@@ -1,1 +1,21 @@
 0.4.325
+dynamodbTable:
+  Type: AWS::DynamoDB::Table
+  Properties:
+    AttributeDefinitions:
+      - 
+        attribute definition
+    GlobalSecondaryIndexes:
+      - 
+        global secondary indexes
+    LocalSecondaryIndexes:
+      - 
+        local secondary indexes
+    KeySchema:
+      - 
+        key schema
+    ProvisionedThroughput: 
+    TableName: 
+    Tags:
+      - Key: key
+        Value: value
