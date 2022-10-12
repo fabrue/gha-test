@@ -7,7 +7,7 @@ repository:
   name: gha-test
 
   # A short description of the repository that will show up on GitHub
-  description: description of repo
+  description: Hallo, Test, 123
 
   # A URL with more information about the repository
   homepage: https://example.github.io/
