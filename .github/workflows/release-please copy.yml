@@ -1,12 +1,12 @@
-on:
-  pull_request:
-    types: [opened]
+# on:
+#   pull_request:
+#     types: [opened]
   
-name: release-please
-jobs:
-  release-please:
-    runs-on: ubuntu-latest
-    if: ${{ github.event.pull_request.base.ref == 'main' }}
-    steps:
-      - name: foobar
-        run: echo "this should not be shown"
+# name: release-please
+# jobs:
+#   release-please:
+#     runs-on: ubuntu-latest
+#     if: ${{ github.event.pull_request.base.ref == 'main' }}
+#     steps:
+#       - name: foobar
+#         run: echo "this should not be shown"
