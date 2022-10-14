@@ -5,6 +5,13 @@
 - improve ci
 - improve ci
 
+## [2.6.0](https://github.com/fabrue/gha-test/compare/v2.5.0...v2.6.0) (2022-10-14)
+
+
+### Features
+
+* dummy change ([021618c](https://github.com/fabrue/gha-test/commit/021618c4a946a57486c01fce1c05549d6a3077bc))
+
 ## [2.5.0](https://github.com/fabrue/gha-test/compare/v2.4.0...v2.5.0) (2022-10-14)
 
 
