@@ -1,20 +1,20 @@
-# on:
-#   push:
-#     branches:
-#       - main
-# name: release-please
-# env:
-#   BUCKET_NAME: lambda-artifact-repository.management.tt.apollo.tom-tailor.com
-#   LAMBDA_FUNCTION_NAME: tradebyte-convert-order
-# jobs:
-#   release-please:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: trstringer/manual-approval@v1
-#         with:
-#           secret: ${{ github.TOKEN }}
-#           approvers: fabrue
-#           minimum-approvals: 1
-#           issue-title: "Confirm Tableau deployment"
-#       - name: debug
-#         run: whoami && ls
+on:
+  push:
+    branches:
+      - main
+name: release-please
+env:
+  BUCKET_NAME: lambda-artifact-repository.management.tt.apollo.tom-tailor.com
+  LAMBDA_FUNCTION_NAME: tradebyte-convert-order
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: trstringer/manual-approval@v1
+        with:
+          secret: ${{ github.TOKEN }}
+          approvers: fabrue
+          minimum-approvals: 1
+          issue-title: "Confirm Tableau deployment"
+      - name: debug
+        run: whoami && ls
