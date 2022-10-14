@@ -5,6 +5,16 @@
 - improve ci
 - improve ci
 
+## [2.5.0](https://github.com/fabrue/gha-test/compare/v2.4.0...v2.5.0) (2022-10-14)
+
+
+### Features
+
+* change 1 ([e545d47](https://github.com/fabrue/gha-test/commit/e545d47ddb9ef46bebb75f79956154accb9178bc))
+* change 2 ([cbd33a6](https://github.com/fabrue/gha-test/commit/cbd33a69d43e1e784e15bf77f424cf03c9502b60))
+* improve ci ([5fac28e](https://github.com/fabrue/gha-test/commit/5fac28e5c5904536ad85774d5e58797284ae4670))
+* improve ci ([74e3017](https://github.com/fabrue/gha-test/commit/74e30178e67dbc57d33d622271ef57c080b8f323))
+
 ## v2.4.0 (2022-07-30)
 
 ### Feat
