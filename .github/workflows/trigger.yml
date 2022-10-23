@@ -1,0 +1,23 @@
+name: Create GitHub Release
+
+on:
+  push:
+    tags:
+      - '[0-9]+.[0-9]+.[0-9]+'
+permissions:
+  id-token: write
+  contents: write
+  pull-requests: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Create GitHub release tag
+        run: |
+          git tag ${{ github.run_id }}
+          git push origin ${{ github.run_id }}
