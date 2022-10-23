@@ -1,3 +1,12 @@
+## [13.4.0] - 2022-10-23
+### :sparkles: New Features
+- [`91936cd`](https://github.com/fabrue/gha-test/commit/91936cdd22f1c659789bee6e1a4dc6f53f44e192) - add ci feature *(commit by [@fabrue](https://github.com/fabrue))*
+- [`cf42f7e`](https://github.com/fabrue/gha-test/commit/cf42f7e66183317376dbfb9296a1f3c421dbddc1) - change lambda *(commit by [@fabrue](https://github.com/fabrue))*
+
+### :bug: Bug Fixes
+- [`5544c13`](https://github.com/fabrue/gha-test/commit/5544c13287d4744ebd0cd0623a33f65dac01cb5f) - fix bug *(commit by [@fabrue](https://github.com/fabrue))*
+
+
 ## Unreleased
 
 ### Feat
@@ -78,3 +87,5 @@
 ### Refactor
 
 - **release-please**: typo
+
+[13.4.0]: https://github.com/fabrue/gha-test/compare/12.4.0...13.4.0
