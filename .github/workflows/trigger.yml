@@ -19,5 +19,5 @@ jobs:
 
       - name: Create GitHub release tag
         run: |
-          git tag ${{ github.run_id }}
-          git push origin ${{ github.run_id }}
+          git tag 14.0.0
+          git push origin 14.0.0
