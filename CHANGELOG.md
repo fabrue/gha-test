@@ -14,6 +14,14 @@
 - improve ci
 - improve ci
 
+## [2.6.1](https://github.com/fabrue/gha-test/compare/v2.6.0...v2.6.1) (2022-10-14)
+
+
+### Bug Fixes
+
+* this is a fix ([396f76c](https://github.com/fabrue/gha-test/commit/396f76c4d32c54757ff682bce5c00c2f619a7402))
+* this is a fix ([07d28c6](https://github.com/fabrue/gha-test/commit/07d28c6defe46f1715af4bafcddfa2ce04e3a386))
+
 ## [2.6.0](https://github.com/fabrue/gha-test/compare/v2.5.0...v2.6.0) (2022-10-14)
 
 
